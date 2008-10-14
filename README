@@ -1,0 +1,31 @@
+DatabaseCounters
+================
+
+Adds two database counters to the log for a request:
+
+ - total number of requests that were made
+ - total number of rows that were returned
+
+
+Example
+=======
+
+Enabling in a Controller:
+
+    class ApplicationController < ActionController::Base
+        database_counters :on
+        # ...
+    end
+
+Will result in log output like so:
+
+    Completed in 0.05835 (17 reqs/sec) | Rendering: 0.00007 (0%) | DB: 0.00265 (4%) Calls: 5 Rows: 6 | 200 OK [http://localhost/]
+
+
+Support
+=======
+
+See <http://9astronauts.com/code/database_counters/>
+
+
+Copyright (c) 2007-8 Nine Astronauts, released under the MIT license.
