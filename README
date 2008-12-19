@@ -19,6 +19,10 @@ Enabling in a Controller:
 
 Will result in log output like so:
 
+    Completed in 847ms (View: 0, DB: 5 Calls: 92 Rows: 671) | 200 OK [http://localhost/]
+
+Or, in older (< 2.2) versions of Rails:
+
     Completed in 0.05835 (17 reqs/sec) | Rendering: 0.00007 (0%) | DB: 0.00265 (4%) Calls: 5 Rows: 6 | 200 OK [http://localhost/]
 
 

@@ -54,15 +54,15 @@ module NineAstronauts
         #
         #    ... | DB: 3.14276 (97%) Calls: 27 Rows: 43 | ...
         #
-        def active_record_runtime_with_database_counters(runtime)
+        def active_record_runtime_with_database_counters(*args)
           if NineAstronauts::DatabaseCounters::Counters.active?
             "%s Calls: %d Rows: %d" % [
-              active_record_runtime_without_database_counters(runtime),
+              active_record_runtime_without_database_counters(*args),
               NineAstronauts::DatabaseCounters::Counters.queries,
               NineAstronauts::DatabaseCounters::Counters.rows
             ]
           else
-            active_record_runtime_without_database_counters(runtime)
+            active_record_runtime_without_database_counters(*args)
           end
         end
         
